@@ -48,13 +48,13 @@
     <ItemGroup Condition="'$(BuildGroup)'=='ALL'">
         <BuildGroupProject Include="Vcl.MyComponents.dproj">
             <ProjectGuid>{EDB18F9C-C4CD-4627-82A5-05BD4503AF47}</ProjectGuid>
-            <Configurations>Debug;Release</Configurations>
+            <Configurations>Release</Configurations>
             <Platforms>Win32;Win64</Platforms>
             <Enabled>True</Enabled>
         </BuildGroupProject>
         <BuildGroupProject Include="Vcl.dclMyComponents.dproj">
             <ProjectGuid>{639FE706-1C60-4594-A1F3-4F2FF07E2732}</ProjectGuid>
-            <Configurations>Debug;Release</Configurations>
+            <Configurations>Release</Configurations>
             <Platforms>Win32;Win64</Platforms>
             <Enabled>True</Enabled>
         </BuildGroupProject>
