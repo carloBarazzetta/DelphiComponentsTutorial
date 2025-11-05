@@ -1,0 +1,175 @@
+object ClockLabelEditor: TClockLabelEditor
+  Left = 0
+  Top = 0
+  Caption = 'ClockLabel Component Editor %s - Copyright Ethea S.r.l.'
+  ClientHeight = 220
+  ClientWidth = 380
+  Constraints.MinHeight = 210.000000000000000000
+  Constraints.MinWidth = 350.000000000000000000
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object BottomPanel: TPanel
+    Align = Right
+    Position.X = 282.000000000000000000
+    Size.Width = 98.000000000000000000
+    Size.Height = 220.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Left = 269
+    object OKButton: TButton
+      Align = Top
+      Default = True
+      ModalResult = 1
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 2.000000000000000000
+      Margins.Right = 2.000000000000000000
+      Margins.Bottom = 2.000000000000000000
+      Position.X = 2.000000000000000000
+      Position.Y = 2.000000000000000000
+      Size.Width = 94.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'OK'
+      OnClick = OKButtonClick
+      Left = 3
+      Top = 3
+    end
+    object ApplyButton: TButton
+      Align = Top
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 2.000000000000000000
+      Margins.Right = 2.000000000000000000
+      Margins.Bottom = 2.000000000000000000
+      Position.X = 2.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 94.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = '&Apply'
+      OnClick = ApplyButtonClick
+      Left = 3
+      Top = 67
+    end
+    object CancelButton: TButton
+      Align = Top
+      Cancel = True
+      ModalResult = 2
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 2.000000000000000000
+      Margins.Right = 2.000000000000000000
+      Margins.Bottom = 2.000000000000000000
+      Position.X = 2.000000000000000000
+      Position.Y = 62.000000000000000000
+      Size.Width = 94.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Cancel'
+      Left = 3
+      Top = 35
+    end
+    object HelpButton: TButton
+      Align = Top
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 2.000000000000000000
+      Margins.Right = 2.000000000000000000
+      Margins.Bottom = 2.000000000000000000
+      Position.X = 2.000000000000000000
+      Position.Y = 92.000000000000000000
+      Size.Width = 94.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = '&Help'
+      OnClick = HelpButtonClick
+      Left = 3
+      Top = 99
+    end
+  end
+  object PropertiesPanel: TPanel
+    Align = Client
+    Size.Width = 282.000000000000000000
+    Size.Height = 220.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object ClockLabel: TClockLabel
+      Align = Client
+      StyledSettings = [Family, Style, FontColor]
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Size.Width = 262.000000000000000000
+      Size.Height = 72.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 24.000000000000000000
+      TextSettings.HorzAlign = Center
+      Left = 10
+      Top = 137
+    end
+    object PreviewLabel: TLabel
+      Align = Top
+      StyledSettings = [Family, Size, FontColor]
+      Size.Width = 282.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.HorzAlign = Center
+      Text = 'CLOCK LABEL PREVIEW'
+      Top = 114
+    end
+    object ClockTypeGroupBox: TGroupBox
+      Align = Top
+      Position.Y = 28.000000000000000000
+      Size.Width = 282.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'ClockType Property'
+      TabOrder = 0
+      object ClockTypeComboBox: TComboBox
+        Align = Client
+        Margins.Left = 4.000000000000000000
+        Margins.Top = 20.000000000000000000
+        Margins.Right = 4.000000000000000000
+        Margins.Bottom = 4.000000000000000000
+        Size.Width = 274.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        OnClosePopup = ClockTypeComboBoxClosePopup
+        Left = 5
+        Top = 21
+      end
+    end
+    object SpecialFontGroupBox: TGroupBox
+      Align = Top
+      Position.Y = 78.000000000000000000
+      Size.Width = 282.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Special Font Property'
+      TabOrder = 1
+      Top = 57
+      object SpecialFontComboBox: TComboBox
+        Align = Client
+        Margins.Left = 4.000000000000000000
+        Margins.Top = 20.000000000000000000
+        Margins.Right = 4.000000000000000000
+        Margins.Bottom = 4.000000000000000000
+        Size.Width = 274.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        OnClosePopup = SpecialFontComboBoxClosePopup
+        Left = 5
+        Top = 21
+      end
+    end
+  end
+end

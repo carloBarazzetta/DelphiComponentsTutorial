@@ -1,0 +1,133 @@
+object fmMain: TfmMain
+  Left = 0
+  Top = 0
+  Caption = 'ClockLabel App Demo - '#169' Ethea S.r.l.'
+  ClientHeight = 241
+  ClientWidth = 385
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object ClockLabel: TClockLabel
+    Align = None
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 32.000000000000000000
+    Position.Y = 17.000000000000000000
+    Size.Width = 146.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 28.000000000000000000
+    TabOrder = 1
+  end
+  object MatrixClockLabel: TClockLabel
+    Align = None
+    StyledSettings = [Style, FontColor]
+    Position.X = 32.000000000000000000
+    Position.Y = 73.000000000000000000
+    Size.Width = 176.000000000000000000
+    Size.Height = 42.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Family = '5x7 DOT Matrix'
+    TextSettings.Font.Size = 28.000000000000000000
+    TabOrder = 2
+    SpecialFont = sfDotMatrix
+  end
+  object AlarmClockLabel: TClockLabel
+    Align = None
+    StyledSettings = [Style, FontColor]
+    Position.X = 32.000000000000000000
+    Position.Y = 133.000000000000000000
+    Size.Width = 176.000000000000000000
+    Size.Height = 39.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Family = 'alarm clock'
+    TextSettings.Font.Size = 28.000000000000000000
+    TabOrder = 3
+    ClockType = ctMillisecondsClock
+    DisplayFormat = 'hh:mm:ss.zzz'
+    SpecialFont = sfAlarmClock
+    TimerInterval = 10
+  end
+  object hhmmClockLabel: TClockLabel
+    Align = None
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 32.000000000000000000
+    Position.Y = 180.000000000000000000
+    Size.Width = 88.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 28.000000000000000000
+    TabOrder = 4
+    ClockType = ctHourMinutesClock
+    DisplayFormat = 'hh:mm'
+  end
+  object AppStyleRadioGroup: TGroupBox
+    Position.X = 216.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 152.000000000000000000
+    Size.Height = 73.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Change Style'
+    TabOrder = 0
+    object RadioButtonLightStyle: TRadioButton
+      Align = Top
+      GroupName = 'Styles'
+      IsChecked = True
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 20.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 20.000000000000000000
+      Size.Width = 136.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 39
+      Text = 'Light Style'
+      OnClick = RadioButtonLightStyleClick
+      object AlarmButton: TButton
+        Position.X = 24.000000000000000000
+        Position.Y = 112.000000000000000000
+        Size.Width = 105.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 7
+        Text = 'Edit ClockLabel'
+        OnClick = AlarmButtonClick
+      end
+    end
+    object RadioButtonDarkStyle: TRadioButton
+      Align = Top
+      GroupName = 'Styles'
+      Margins.Left = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 39.000000000000000000
+      Size.Width = 136.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 38
+      Text = 'Dark Style'
+      OnClick = RadioButtonDarkStyleClick
+      object hhmmButton: TButton
+        Position.X = 24.000000000000000000
+        Position.Y = 144.000000000000000000
+        Size.Width = 105.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 8
+        Text = 'Edit ClockLabel'
+        OnClick = hhmmButtonClick
+      end
+    end
+  end
+  object MatrixButton: TButton
+    Position.X = 248.000000000000000000
+    Position.Y = 89.000000000000000000
+    Size.Width = 105.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Edit ClockLabel'
+    OnClick = MatrixButtonClick
+  end
+end

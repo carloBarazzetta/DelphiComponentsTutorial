@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8A418B6A-E320-4F9A-B06A-201F3CD4D03D}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="FMX.MyComponents.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FMX.dclMyComponents.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FMX_MyComponents">
+        <MSBuild Projects="FMX.MyComponents.dproj"/>
+    </Target>
+    <Target Name="FMX_MyComponents:Clean">
+        <MSBuild Projects="FMX.MyComponents.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMX_MyComponents:Make">
+        <MSBuild Projects="FMX.MyComponents.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FMX_dclMyComponents">
+        <MSBuild Projects="FMX.dclMyComponents.dproj"/>
+    </Target>
+    <Target Name="FMX_dclMyComponents:Clean">
+        <MSBuild Projects="FMX.dclMyComponents.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMX_dclMyComponents:Make">
+        <MSBuild Projects="FMX.dclMyComponents.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FMX_MyComponents;FMX_dclMyComponents"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FMX_MyComponents:Clean;FMX_dclMyComponents:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FMX_MyComponents:Make;FMX_dclMyComponents:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

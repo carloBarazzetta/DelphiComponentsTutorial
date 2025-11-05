@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400" height="850" version="1.1" viewBox="0 0 1400 850" xmlns="http://www.w3.org/2000/svg">
+ <!-- Background -->
+ <rect transform="scale(-1)" x="-1400" y="-850" width="1400" height="850" fill-opacity="0" stroke-width=".87905"/>
+ <!-- Title -->
+ <text x="9.8385487" y="28.362438" font-family="'Segoe UI'" font-size="26.667px" style="line-height:1.25" xml:space="preserve"><tspan x="9.8385487" y="28.362438" font-family="Arial, sans-serif" font-size="26.667px">Embarcadero © Delphi - FMX Components Schema</tspan></text>
+ <!-- TObject -->
+ <rect x="632.42" y="32" width="100" height="35" rx="17.5" fill="#ccc" stroke="#333" stroke-width="1.5"/>
+ <text x="682.41748" y="54" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TObject</text>
+ <!-- TPersistent -->
+ <rect x="617.42" y="92" width="130" height="35" rx="17.5" fill="#ccc" stroke="#333" stroke-width="1.5"/>
+ <text x="682.41748" y="114" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TPersistent</text>
+ <!-- Streamable Classes Group (Pink) -->
+ <rect x="62.717" y="148.3" width="475.67" height="129.4" rx="17.5" fill="#f4d7ee" stroke="#fae" stroke-width="2"/>
+ <text x="74.416969" y="272" fill="darkblue" font-family="Arial, sans-serif" font-size="16px" font-weight="bold">Streamable Classes</text>
+ <rect x="130.42" y="168" width="100" height="35" rx="17.5" fill="#f9c" stroke="#333" stroke-width="1.5"/>
+ <text x="180.41687" y="190" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TGradient</text>
+ <rect x="240.42" y="168" width="100" height="35" rx="17.5" fill="#f9c" stroke="#333" stroke-width="1.5"/>
+ <text x="290.41684" y="190" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TPosition</text>
+ <rect x="350.42" y="168" width="100" height="35" rx="17.5" fill="#f9c" stroke="#333" stroke-width="1.5"/>
+ <text x="400.41748" y="190" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TStrings</text>
+ <rect x="346.42" y="218" width="110" height="35" rx="17.5" fill="#f9c" stroke="#333" stroke-width="1.5"/>
+ <text x="401.41748" y="240" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TStringList</text>
+ <!-- Nonstreamable Classes Group (Green) -->
+ <rect x="842.8" y="71.385" width="498.56" height="89.23" rx="17.5" fill="#d7f4d7" stroke="#afe9af" stroke-width="2"/>
+ <text x="854.41748" y="154" fill="darkblue" font-family="Arial, sans-serif" font-size="16px" font-weight="bold">Nonstreamable Classes</text>
+ <rect x="948.42" y="91" width="70" height="35" rx="17.5" fill="#9c6" stroke="#333" stroke-width="1.5"/>
+ <text x="983.41748" y="113" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TList</text>
+ <rect x="1038.4" y="91" width="80" height="35" rx="17.5" fill="#9c6" stroke="#333" stroke-width="1.5"/>
+ <text x="1078.417" y="113" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TStack</text>
+ <rect x="1133.4" y="91" width="90" height="35" rx="17.5" fill="#9c6" stroke="#333" stroke-width="1.5"/>
+ <text x="1178.4175" y="113" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TStream</text>
+ <!-- TComponent -->
+ <rect x="612.42" y="162" width="140" height="35" rx="17.5" fill="#ccc" stroke="#333" stroke-width="1.5"/>
+ <text x="682.41748" y="184" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TComponent</text>
+ <!-- TFmxObject -->
+ <rect x="607.42" y="234" width="150" height="35" rx="17.5" fill="#ccc" stroke="#333" stroke-width="1.5"/>
+ <text x="682.41748" y="256" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TFmxObject</text>
+ <!-- Nonvisual Components Group (Cyan) -->
+ <rect x="842.73" y="218.31" width="499.23" height="89.385" rx="17.5" fill="#d7f4ee" stroke="#afe9c6" stroke-width="2"/>
+ <text x="854.41748" y="301" fill="darkblue" font-family="Arial, sans-serif" font-size="16px" font-weight="bold">Nonvisual Components</text>
+ <rect x="909.42" y="239" width="130" height="35" rx="17.5" fill="#6cc" stroke="#333" stroke-width="1.5"/>
+ <text x="974.41748" y="261" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TClientDataSet</text>
+ <rect x="1049.4" y="239" width="120" height="35" rx="17.5" fill="#6cc" stroke="#333" stroke-width="1.5"/>
+ <text x="1109.4172" y="261" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TDataSource</text>
+ <rect x="1181.4" y="239" width="80" height="35" rx="17.5" fill="#6cc" stroke="#333" stroke-width="1.5"/>
+ <text x="1221.4175" y="261" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TTimer</text>
+ <!-- 3D Controls Group (Orange) -->
+ <rect x="62.641" y="332.22" width="475.83" height="373" rx="17.5" fill="#f4e3d7" stroke="#fca" stroke-width="2"/>
+ <text x="74.416969" y="699.35217" fill="darkblue" font-family="Arial, sans-serif" font-size="16px" font-weight="bold">3D Controls</text>
+ <rect x="222.42" y="347" width="120" height="35" rx="17.5" fill="#fc6" stroke="#333" stroke-width="1.5"/>
+ <text x="282.41684" y="369" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TControl3D</text>
+ <!-- Row 1 of 3D controls -->
+ <rect x="112.42" y="402" width="90" height="35" rx="17.5" fill="#fc6" stroke="#333" stroke-width="1.5"/>
+ <text x="157.41684" y="424" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TDummy</text>
+ <rect x="212.42" y="402" width="90" height="35" rx="17.5" fill="#fc6" stroke="#333" stroke-width="1.5"/>
+ <text x="257.41684" y="424" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TCamera</text>
+ <rect x="316.42" y="402" width="70" height="35" rx="17.5" fill="#fc6" stroke="#333" stroke-width="1.5"/>
+ <text x="351.41748" y="424" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TLight</text>
+ <rect x="396.42" y="402" width="100" height="35" rx="17.5" fill="#fc6" stroke="#333" stroke-width="1.5"/>
+ <text x="446.41748" y="424" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TShape3D</text>
+ <!-- TModel3D -->
+ <rect x="102.42" y="452" width="110" height="35" rx="17.5" fill="#fc6" stroke="#333" stroke-width="1.5"/>
+ <text x="157.41684" y="474" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TModel3D</text>
+ <!-- TCustomMesh -->
+ <rect x="290.42" y="470" width="130" height="35" rx="17.5" fill="#fc6" stroke="#333" stroke-width="1.5"/>
+ <text x="355.41748" y="492" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TCustomMesh</text>
+ <!-- Row 2 of mesh controls -->
+ <rect x="116.42" y="522" width="80" height="35" rx="17.5" fill="#fc6" stroke="#333" stroke-width="1.5"/>
+ <text x="156.41687" y="544" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TMesh</text>
+ <rect x="220.13" y="522" width="70" height="35" rx="17.5" fill="#fc6" stroke="#333" stroke-width="1.5"/>
+ <text x="255.1265" y="544" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TCube</text>
+ <rect x="312.13" y="522" width="80" height="35" rx="17.5" fill="#fc6" stroke="#333" stroke-width="1.5"/>
+ <text x="352.12714" y="544" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TCone</text>
+ <!-- TExtrudedShape3D -->
+ <rect x="274.42" y="579" width="160" height="35" rx="17.5" fill="#fc6" stroke="#333" stroke-width="1.5"/>
+ <text x="354.41748" y="601" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TExtrudedShape3D</text>
+ <!-- Bottom row 3D -->
+ <rect x="124.42" y="627" width="80" height="35" rx="17.5" fill="#fc6" stroke="#333" stroke-width="1.5"/>
+ <text x="164.41687" y="649" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TPath3D</text>
+ <rect x="214.42" y="627" width="80" height="35" rx="17.5" fill="#fc6" stroke="#333" stroke-width="1.5"/>
+ <text x="254.41684" y="649" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TText3D</text>
+ <rect x="304.42" y="627" width="100" height="35" rx="17.5" fill="#fc6" stroke="#333" stroke-width="1.5"/>
+ <text x="354.41748" y="649" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TEllipse3D</text>
+ <!-- FireMonkey Primitives Group (Light Blue) -->
+ <rect x="842.72" y="354.3" width="499.24" height="166.04" rx="17.5" fill="#d5f6ff" stroke="#aef" stroke-width="2"/>
+ <text x="854.41748" y="513" fill="darkblue" font-family="Arial, sans-serif" font-size="16px" font-weight="bold">FireMonkey Primitives</text>
+ <rect x="1038.4" y="369" width="90" height="35" rx="17.5" fill="#9cf" stroke="#333" stroke-width="1.5"/>
+ <text x="1083.417" y="391" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TShape</text>
+ <!-- Shapes row -->
+ <rect x="908.42" y="424" width="70" height="35" rx="17.5" fill="#9cf" stroke="#333" stroke-width="1.5"/>
+ <text x="943.41748" y="446" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TLine</text>
+ <rect x="988.42" y="424" width="70" height="35" rx="17.5" fill="#9cf" stroke="#333" stroke-width="1.5"/>
+ <text x="1023.4175" y="446" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TText</text>
+ <rect x="1068.4" y="424" width="110" height="35" rx="17.5" fill="#9cf" stroke="#333" stroke-width="1.5"/>
+ <text x="1123.4174" y="446" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TRectangle</text>
+ <rect x="1188.4" y="424" width="80" height="35" rx="17.5" fill="#9cf" stroke="#333" stroke-width="1.5"/>
+ <text x="1228.4175" y="446" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TEllipse</text>
+ <rect x="1188.4" y="468" width="80" height="35" rx="17.5" fill="#9cf" stroke="#333" stroke-width="1.5"/>
+ <text x="1228.4175" y="490" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TCircle</text>
+ <!-- Styled Controls Group (Purple/Blue) -->
+ <rect x="842.71" y="568.29" width="499.26" height="234.95" rx="17.5" fill="#e3d7f4" stroke="#ddafe9" stroke-width="2"/>
+ <text x="854.41748" y="794.64783" fill="darkblue" font-family="Arial, sans-serif" font-size="16px" font-weight="bold">Styled Controls</text>
+ <rect x="1009.4" y="590" width="140" height="35" rx="17.5" fill="#c9f" stroke="#333" stroke-width="1.5"/>
+ <text x="1079.4175" y="612" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TStyledControl</text>
+ <!-- First row styled controls -->
+ <rect x="857.42" y="648" width="80" height="35" rx="17.5" fill="#c9f" stroke="#333" stroke-width="1.5"/>
+ <text x="897.41748" y="670" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TPanel</text>
+ <rect x="955.42" y="648" width="110" height="35" rx="17.5" fill="#c9f" stroke="#333" stroke-width="1.5"/>
+ <text x="1010.4172" y="670" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TTextControl</text>
+ <rect x="1085.4" y="648" width="90" height="35" rx="17.5" fill="#c9f" stroke="#333" stroke-width="1.5"/>
+ <text x="1130.4175" y="670" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TToolBar</text>
+ <rect x="1194.4" y="648" width="130" height="35" rx="17.5" fill="#c9f" stroke="#333" stroke-width="1.5"/>
+ <text x="1259.4175" y="670" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TCustomEdit</text>
+ <!-- Second row styled controls -->
+ <rect x="857.42" y="705" width="80" height="35" rx="17.5" fill="#c9f" stroke="#333" stroke-width="1.5"/>
+ <text x="897.41748" y="727" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TLabel</text>
+ <rect x="947.42" y="705" width="120" height="35" rx="17.5" fill="#c9f" stroke="#333" stroke-width="1.5"/>
+ <text x="1007.4174" y="727" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TGroupBox</text>
+ <rect x="1077.4" y="705" width="140" height="35" rx="17.5" fill="#c9f" stroke="#333" stroke-width="1.5"/>
+ <text x="1147.4175" y="727" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TCustomButton</text>
+ <rect x="1229.4" y="705" width="70" height="35" rx="17.5" fill="#c9f" stroke="#333" stroke-width="1.5"/>
+ <text x="1264.4175" y="727" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TEdit</text>
+ <rect x="1106.4" y="749" width="90" height="35" rx="17.5" fill="#c9f" stroke="#333" stroke-width="1.5"/>
+ <text x="1151.4175" y="771" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TButton</text>
+ <g fill="none" stroke="#333" stroke-width="2">
+  <!-- Connectors -->
+  <path d="m282.39 392.02h165.76v9.9514m-165.81-9.9148h71.132v9.8702m-71.038-9.9983h-24.619v10.155m24.69-20.085v10h-123.72v10"/>
+  <path d="m354.31 505v17.238m-95.181-10.243v10m95.33-10h-215.25v10"/>
+  <path d="m354.57 459.58v10.912m92.792-9.9316h-93.465m0.51591 107.88v10.991m92.974-142.36v131.82m0.93514-0.76612h-94.914"/>
+  <path d="m158 437.48v15.114"/>
+  <path d="m256.05 627.55v-7.0848m98.491 3.1038v-10m0 13.439v-6.0115h-190.24v6.8325"/>
+  <path d="m1083.4 414h145v10m-145-10h39.999v10m-39.999-10h-59.999v10m59.999-20v10h-140v10"/>
+  <path d="m1228.4 467.29v-8.4356"/>
+  <path d="m283.13 157.48-105.28-0.0948v10m105.28-9.9052h118.73v10m581.68-76.277v-12.323m95.988 11.973v-11.675m101.56 11.576v-12.242m1.3498 1.1337h-500.02m289.47 159.06v-12.799m138.26 12.935v-12.799m112.89 12.7v-12.88m0.7044 1.1337h-541.32m355.89 161.46h-356.87m327.45 219.89h-327.48m0.90397-308.35h-399.21v46.395m399.31-77.564v340.44m0-412.27v37.309m0-107.31v35m-0.19357-14.396v-9.7947h-392.47v29.576m392.66-100.39v25"/>
+  <path d="m1132.8 638.62v10m-75.551-10.514h206.84v9.7542m-206.7-9.8854h-49.862v10.046m72.242-23.271v13.245h-182.35v10"/>
+  <path d="m401.94 203.41v14.697"/>
+  <path d="m1264.3 682.69v22.309"/>
+  <path d="m1150.3 739.25v10"/>
+  <path d="m1007.4 683.38v11.943m-60 0h-60v10m119.84-9.9052h135.15v10m-194.98-10.095h60v10"/>
+  <!-- TControl -->
+ </g>
+ <rect x="622.42" y="320" width="120" height="35" rx="17.5" fill="#ccc" stroke="#333" stroke-width="1.5"/>
+ <text x="682.41748" y="342" fill="darkblue" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" text-anchor="middle">TControl</text>
+</svg>

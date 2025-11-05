@@ -1,0 +1,62 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{AF12B45C-5690-4C1D-B455-5C5294F63AF6}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Vcl.MyComponents.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Vcl.dclMyComponents.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="VCL_MyComponents">
+        <MSBuild Projects="Vcl.MyComponents.dproj"/>
+    </Target>
+    <Target Name="VCL_MyComponents:Clean">
+        <MSBuild Projects="Vcl.MyComponents.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VCL_MyComponents:Make">
+        <MSBuild Projects="Vcl.MyComponents.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VCL_dclMyComponents">
+        <MSBuild Projects="Vcl.dclMyComponents.dproj"/>
+    </Target>
+    <Target Name="VCL_dclMyComponents:Clean">
+        <MSBuild Projects="Vcl.dclMyComponents.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VCL_dclMyComponents:Make">
+        <MSBuild Projects="Vcl.dclMyComponents.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="VCL_MyComponents;VCL_dclMyComponents"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="VCL_MyComponents:Clean;VCL_dclMyComponents:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="VCL_MyComponents:Make;VCL_dclMyComponents:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+    <ItemGroup Condition="'$(BuildGroup)'=='ALL'">
+        <BuildGroupProject Include="Vcl.MyComponents.dproj">
+            <ProjectGuid>{EDB18F9C-C4CD-4627-82A5-05BD4503AF47}</ProjectGuid>
+            <Configurations>Debug;Release</Configurations>
+            <Platforms>Win32;Win64</Platforms>
+            <Enabled>True</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="Vcl.dclMyComponents.dproj">
+            <ProjectGuid>{639FE706-1C60-4594-A1F3-4F2FF07E2732}</ProjectGuid>
+            <Configurations>Debug;Release</Configurations>
+            <Platforms>Win32</Platforms>
+            <Enabled>True</Enabled>
+        </BuildGroupProject>
+    </ItemGroup>
+</Project>

@@ -1,0 +1,153 @@
+<svg viewBox="0 0 1200 1050" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <style>
+      .box { fill: yellow; stroke: darkblue; stroke-width: 2; }
+      .box-highlight { fill: orange; stroke: darkblue; stroke-width: 2; }
+      .text { fill: darkblue; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-anchor: middle; }
+      .group-box { fill: none; stroke: #7799bb; stroke-width: 2; stroke-dasharray: 5,5; }
+      .group-text { fill: darkblue; font-family: Arial, sans-serif; font-size: 14px; font-weight: normal; }
+      .connector { stroke: darkblue; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+
+  <!-- TObject at top -->
+  <rect class="box" x="520" y="20" width="160" height="50" rx="3"/>
+  <text class="text" x="600" y="50">TObject</text>
+
+  <!-- TPersistent -->
+  <rect class="box" x="280" y="120" width="160" height="50" rx="3"/>
+  <text class="text" x="360" y="150">TPersistent</text>
+
+  <!-- Nonstreamable Classes Group -->
+  <rect class="group-box" x="600" y="100" width="280" height="120"/>
+  <text class="group-text" x="620" y="205">Nonstreamable Classes</text>
+
+  <rect class="box" x="620" y="120" width="120" height="50" rx="3"/>
+  <text class="text" x="680" y="150">TRegistry</text>
+
+  <rect class="box" x="750" y="120" width="120" height="50" rx="3"/>
+  <text class="text" x="810" y="150">TList</text>
+
+  <!-- Streamable Classes Group -->
+  <rect class="group-box" x="30" y="210" width="300" height="170"/>
+  <text class="group-text" x="50" y="315">Streamable</text>
+  <text class="group-text" x="50" y="335">Classes</text>
+
+  <rect class="box" x="50" y="240" width="120" height="50" rx="3"/>
+  <text class="text" x="110" y="270">TFont</text>
+
+  <rect class="box" x="180" y="240" width="120" height="50" rx="3"/>
+  <text class="text" x="240" y="270">TStrings</text>
+
+  <rect class="box" x="180" y="300" width="140" height="50" rx="3"/>
+  <text class="text" x="250" y="330">TStringList</text>
+
+  <!-- TComponent -->
+  <rect class="box-highlight" x="395" y="230" width="180" height="50" rx="3"/>
+  <text class="text" x="485" y="260">TComponent</text>
+
+  <!-- TControl -->
+  <rect class="box" x="290" y="420" width="160" height="50" rx="3"/>
+  <text class="text" x="370" y="450">TControl</text>
+
+  <!-- Nonvisual Components Group -->
+  <rect class="group-box" x="540" y="400" width="350" height="120"/>
+  <text class="group-text" x="560" y="500">Nonvisual Components</text>
+
+  <rect class="box" x="560" y="420" width="140" height="50" rx="3"/>
+  <text class="text" x="630" y="450">TDataSource</text>
+
+  <rect class="box" x="720" y="420" width="120" height="50" rx="3"/>
+  <text class="text" x="780" y="450">TTimer</text>
+
+  <!-- Visual Components Group -->
+  <rect class="group-box" x="30" y="390" width="1140" height="630"/>
+  <text class="group-text" x="50" y="1000">Visual Components</text>
+
+  <!-- TGraphicControl -->
+  <rect class="box-highlight" x="150" y="610" width="220" height="50" rx="3"/>
+  <text class="text" x="260" y="640">TGraphicControl</text>
+
+  <!-- TWinControl -->
+  <rect class="box-highlight" x="630" y="610" width="180" height="50" rx="3"/>
+  <text class="text" x="720" y="640">TWinControl</text>
+
+  <!-- TGraphicControl descendants -->
+  <rect class="group-box" x="70" y="590" width="380" height="290"/>
+  <text class="group-text" x="90" y="850" font-size="12">Do Not Receive Input Focus</text>
+  <text class="group-text" x="90" y="870" font-size="12">Custom Paint Method w/ Canvas</text>
+
+  <rect class="box" x="90" y="720" width="150" height="50" rx="3"/>
+  <text class="text" x="165" y="750">TBevel</text>
+
+  <rect class="box" x="280" y="720" width="160" height="50" rx="3"/>
+  <text class="text" x="360" y="750">TCustomLabel</text>
+
+  <rect class="box" x="280" y="790" width="120" height="50" rx="3"/>
+  <text class="text" x="340" y="820">TLabel</text>
+
+  <!-- TWinControl descendants -->
+  <rect class="group-box" x="490" y="590" width="680" height="420"/>
+
+  <!-- Left branch - TCustomEdit -->
+  <rect class="group-box" x="500" y="680" width="180" height="300"/>
+  <text class="group-text" x="520" y="895" font-size="12">Use a Window</text>
+  <text class="group-text" x="520" y="915" font-size="12">Handle and</text>
+  <text class="group-text" x="520" y="935" font-size="12">Receive Input</text>
+  <text class="group-text" x="520" y="955" font-size="12">Focus</text>
+
+  <rect class="box" x="510" y="720" width="160" height="50" rx="3"/>
+  <text class="text" x="590" y="750">TCustomEdit</text>
+
+  <rect class="box" x="510" y="790" width="120" height="50" rx="3"/>
+  <text class="text" x="570" y="820">TEdit</text>
+
+  <!-- Right branch - TCustomControl -->
+  <rect class="group-box" x="700" y="680" width="460" height="300"/>
+  <text class="group-text" x="720" y="965" font-size="12">Custom Paint Method w/ Canvas</text>
+
+  <rect class="box-highlight" x="760" y="720" width="230" height="50" rx="3"/>
+  <text class="text" x="875" y="750">TCustomControl</text>
+
+  <rect class="box" x="710" y="820" width="160" height="50" rx="3"/>
+  <text class="text" x="790" y="850">TMediaPlayer</text>
+
+  <rect class="box" x="890" y="820" width="180" height="50" rx="3"/>
+  <text class="text" x="980" y="850">TCustomPanel</text>
+
+  <rect class="box" x="890" y="890" width="120" height="50" rx="3"/>
+  <text class="text" x="950" y="920">TPanel</text>
+
+  <!-- Connectors -->
+  <path class="connector" d="M 600,70 L 600,90 L 360,90 L 360,120"/>
+  <path class="connector" d="M 600,90 L 680,90 L 680,120"/>
+  <path class="connector" d="M 600,90 L 810,90 L 810,120"/>
+
+  <path class="connector" d="M 360,170 L 360,190 L 110,190 L 110,240"/>
+  <path class="connector" d="M 360,190 L 240,190 L 240,240"/>
+  <path class="connector" d="M 485,190 L 360,190"/>
+  <path class="connector" d="M 485,190 L 485,230"/>
+  <path class="connector" d="M 360,170 L 360,190"/>
+  <path class="connector" d="M 240,290 L 240,300"/>
+
+  <path class="connector" d="M 485,280 L 485,350 L 370,350 L 370,420"/>
+  <path class="connector" d="M 485,350 L 630,350 L 630,420"/>
+  <path class="connector" d="M 485,350 L 780,350 L 780,420"/>
+
+  <path class="connector" d="M 370,470 L 370,540 L 260,540 L 260,610"/>
+  <path class="connector" d="M 370,540 L 720,540 L 720,610"/>
+
+  <path class="connector" d="M 260,660 L 260,680 L 165,680 L 165,720"/>
+  <path class="connector" d="M 260,680 L 360,680 L 360,720"/>
+  <path class="connector" d="M 360,770 L 360,790"/>
+
+  <path class="connector" d="M 720,660 L 720,680 L 590,680 L 590,720"/>
+  <path class="connector" d="M 720,680 L 875,680 L 875,720"/>
+  <path class="connector" d="M 590,770 L 590,790"/>
+
+  <path class="connector" d="M 875,770 L 875,800 L 790,800 L 790,820"/>
+  <path class="connector" d="M 875,800 L 980,800 L 980,820"/>
+  <path class="connector" d="M 980,870 L 980,890"/>
+</svg>
