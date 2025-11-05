@@ -2,7 +2,7 @@ object ClockLabelEditor: TClockLabelEditor
   Left = 0
   Top = 0
   Caption = 'ClockLabel Component Editor %s - Copyright Ethea S.r.l.'
-  ClientHeight = 220
+  ClientHeight = 210
   ClientWidth = 380
   Constraints.MinHeight = 210.000000000000000000
   Constraints.MinWidth = 350.000000000000000000
@@ -16,7 +16,7 @@ object ClockLabelEditor: TClockLabelEditor
     Align = Right
     Position.X = 282.000000000000000000
     Size.Width = 98.000000000000000000
-    Size.Height = 220.000000000000000000
+    Size.Height = 210.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     Left = 269
@@ -95,7 +95,7 @@ object ClockLabelEditor: TClockLabelEditor
   object PropertiesPanel: TPanel
     Align = Client
     Size.Width = 282.000000000000000000
-    Size.Height = 220.000000000000000000
+    Size.Height = 210.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
     object ClockLabel: TClockLabel
@@ -106,7 +106,7 @@ object ClockLabelEditor: TClockLabelEditor
       Margins.Right = 10.000000000000000000
       Margins.Bottom = 10.000000000000000000
       Size.Width = 262.000000000000000000
-      Size.Height = 72.000000000000000000
+      Size.Height = 62.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.Size = 24.000000000000000000
       TextSettings.HorzAlign = Center
@@ -116,17 +116,17 @@ object ClockLabelEditor: TClockLabelEditor
     object PreviewLabel: TLabel
       Align = Top
       StyledSettings = [Family, Size, FontColor]
+      Position.Y = 100.000000000000000000
       Size.Width = 282.000000000000000000
       Size.Height = 28.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       TextSettings.HorzAlign = Center
-      Text = 'CLOCK LABEL PREVIEW'
+      Text = 'PREVIEW'
       Top = 114
     end
     object ClockTypeGroupBox: TGroupBox
       Align = Top
-      Position.Y = 28.000000000000000000
       Size.Width = 282.000000000000000000
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
@@ -149,7 +149,7 @@ object ClockLabelEditor: TClockLabelEditor
     end
     object SpecialFontGroupBox: TGroupBox
       Align = Top
-      Position.Y = 78.000000000000000000
+      Position.Y = 50.000000000000000000
       Size.Width = 282.000000000000000000
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False

@@ -17,32 +17,32 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="VCL_MyComponents">
+    <Target Name="Vcl_MyComponents">
         <MSBuild Projects="Vcl.MyComponents.dproj"/>
     </Target>
-    <Target Name="VCL_MyComponents:Clean">
+    <Target Name="Vcl_MyComponents:Clean">
         <MSBuild Projects="Vcl.MyComponents.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="VCL_MyComponents:Make">
+    <Target Name="Vcl_MyComponents:Make">
         <MSBuild Projects="Vcl.MyComponents.dproj" Targets="Make"/>
     </Target>
-    <Target Name="VCL_dclMyComponents">
+    <Target Name="Vcl_dclMyComponents">
         <MSBuild Projects="Vcl.dclMyComponents.dproj"/>
     </Target>
-    <Target Name="VCL_dclMyComponents:Clean">
+    <Target Name="Vcl_dclMyComponents:Clean">
         <MSBuild Projects="Vcl.dclMyComponents.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="VCL_dclMyComponents:Make">
+    <Target Name="Vcl_dclMyComponents:Make">
         <MSBuild Projects="Vcl.dclMyComponents.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="VCL_MyComponents;VCL_dclMyComponents"/>
+        <CallTarget Targets="Vcl_MyComponents;Vcl_dclMyComponents"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="VCL_MyComponents:Clean;VCL_dclMyComponents:Clean"/>
+        <CallTarget Targets="Vcl_MyComponents:Clean;Vcl_dclMyComponents:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="VCL_MyComponents:Make;VCL_dclMyComponents:Make"/>
+        <CallTarget Targets="Vcl_MyComponents:Make;Vcl_dclMyComponents:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
     <ItemGroup Condition="'$(BuildGroup)'=='ALL'">
@@ -55,7 +55,7 @@
         <BuildGroupProject Include="Vcl.dclMyComponents.dproj">
             <ProjectGuid>{639FE706-1C60-4594-A1F3-4F2FF07E2732}</ProjectGuid>
             <Configurations>Debug;Release</Configurations>
-            <Platforms>Win32</Platforms>
+            <Platforms>Win32;Win64</Platforms>
             <Enabled>True</Enabled>
         </BuildGroupProject>
     </ItemGroup>
