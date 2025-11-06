@@ -43,7 +43,7 @@ const
   CLOCK_LABEL_PROJECT_URL = 'https://github.com/carloBarazzetta/DelphiComponentsTutorial';
 
 type
-  TClockLabelType = (ctCustomClock, ctClassicClock, ctHourMinutesClock, ctMillisecondsClock);
+  TClockType = (ctCustomClock, ctClassicClock, ctHourMinutesClock, ctMillisecondsClock);
   TSpecialFont = (sfOther, sfDotMatrix, sfAlarmClock);
 
 const
@@ -55,7 +55,7 @@ type
   private
     //Instance Data for Component
     FDisplayFormat: string;
-    FClockLabelType: TClockLabelType;
+    FClockType: TClockType;
     FSpecialFont: TSpecialFont;
 
     //Internal Object
@@ -76,7 +76,7 @@ type
     procedure SetDisplayFormat(const AValue: string);
     function GetInterval: Cardinal;
     procedure SetInterval(const AValue: Cardinal);
-    procedure SetClockLabelType(const AValue: TClockLabelType);
+    procedure SetClockType(const AValue: TClockType);
     procedure SetSpecialFont(const AValue: TSpecialFont);
     //Windows messages
     procedure CMFontChanged(var Message: TMessage); message CM_FONTCHANGED;
@@ -138,7 +138,7 @@ type
     property OnStartDrag;
 
     //My Properties
-    property ClockType: TClockLabelType read FClockLabelType write SetClockLabelType default ctClassicClock;
+    property ClockType: TClockType read FClockType write SetClockType default ctClassicClock;
     property DisplayFormat: string read FDisplayFormat write SetDisplayFormat stored StoreDisplayFormat;
     property SpecialFont: TSpecialFont read FSpecialFont write SetSpecialFont default sfOther;
     property TimerInterval: Cardinal read GetInterval write SetInterval default 1000;
@@ -204,20 +204,21 @@ end;
 
 procedure TClockLabel.CMEnabledChanged(var Message: TMessage);
 begin
-  FClockTimer.Enabled := Self.Enabled;
   inherited;
+  FClockTimer.Enabled := Self.Enabled;
 end;
 
 procedure TClockLabel.CMFontChanged(var Message: TMessage);
 var
   S: TSpecialFont;
 begin
+  inherited;
+  FSpecialFont := sfOther;
   for S := Low(TSpecialFont) to High(TSpecialFont) do
   begin
     if SameText(SpecialFontNames[S], Font.Name) then
       FSpecialFont := S;
   end;
-  inherited;
 end;
 
 constructor TClockLabel.Create(AOwner: TComponent);
@@ -228,7 +229,7 @@ begin
 
   //Default Values of Instance Data
   FDisplayFormat := DEFAULT_DISPLAYFORMAT;
-  FClockLabelType := ctClassicClock;
+  FClockType := ctClassicClock;
 
   //Default Values for inherited properties
   Alignment := taCenter;
@@ -264,16 +265,16 @@ begin
   UpdateClockLabel;
 end;
 
-procedure TClockLabel.SetClockLabelType(const AValue: TClockLabelType);
+procedure TClockLabel.SetClockType(const AValue: TClockType);
 begin
-  if FClockLabelType <> AValue then
+  if FClockType <> AValue then
   begin
     case AValue of
       ctClassicClock: begin DisplayFormat := DEFAULT_DISPLAYFORMAT; TimerInterval := 1000; end;
       ctHourMinutesClock: begin DisplayFormat := 'hh:mm'; TimerInterval := 1000; end;
       ctMillisecondsClock: begin DisplayFormat := 'hh:mm:ss.zzz'; TimerInterval := 10; end;
     end;
-    FClockLabelType := AValue;
+    FClockType := AValue;
   end;
 end;
 
@@ -282,7 +283,7 @@ begin
   if AValue <> FDisplayFormat then
   begin
     FDisplayFormat := AValue;
-    FClockLabelType := ctCustomClock;
+    FClockType := ctCustomClock;
     UpdateClockLabel;
   end;
 end;
@@ -292,7 +293,7 @@ begin
   if FClockTimer.Interval <> AValue then
   begin
     FClockTimer.Interval := AValue;
-    FClockLabelType := ctCustomClock;
+    FClockType := ctCustomClock;
   end;
 end;
 

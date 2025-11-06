@@ -27,22 +27,100 @@ unit VCL.ComponentsIDETools;
 
 interface
 
+{$R MyComponentsSplash.res}
+
 procedure Register;
 
 implementation
 
 uses
-  System.Classes
+  System.SysUtils
+  , System.Classes
+  , ToolsAPI
   , DesignIntf
   , Designer
   , DesignEditors
   , VCLEditors
+  , Vcl.Graphics
+  , Vcl.Imaging.PngImage
   , Vcl.Controls
   , WinApi.Windows
   , WinApi.ShellAPI
   , Vcl.ClockLabel
   , Vcl.ClockLabelComponentEditorUnit
   ;
+
+const
+  MY_COMPONENTS_VERSION = '1.0.0';
+  ABOUT_RES_NAME = 'MYCOMPSPLASH48PNG';
+  SPLASH_RES_NAME = 'MYCOMPSPLASH48PNG';
+  RsAboutTitle = 'Ethea Sample Components';
+  RsAboutDescription = 'Ethea - Sample Components (VCL) - https://github.com/carloBarazzetta/DelphiComponentsTutorial/' + sLineBreak +
+    'Sample Components for VCL (TClockLabel)';
+  RsAboutLicense = 'Apache 2.0 (Free/Opensource)';
+var
+  AboutBoxServices: IOTAAboutBoxServices = nil;
+  AboutBoxIndex: Integer;
+
+function CreateBitmapFromPngRes(const AResName: string): Vcl.Graphics.TBitmap;
+var
+  LPngImage: TPngImage;
+  LResStream: TResourceStream;
+begin
+  LPngImage := nil;
+  try
+    Result := Vcl.Graphics.TBitmap.Create;
+    LPngImage := TPngImage.Create;
+    LResStream := TResourceStream.Create(HInstance, AResName, RT_RCDATA);
+    try
+      LPngImage.LoadFromStream(LResStream);
+      Result.Assign(LPngImage);
+    finally
+      LResStream.Free;
+    end;
+  finally
+    LPngImage.Free;
+  end;
+end;
+
+procedure RegisterAboutBox;
+var
+  LBitmap: Vcl.Graphics.TBitmap;
+begin
+  Supports(BorlandIDEServices,IOTAAboutBoxServices, AboutBoxServices);
+  LBitmap := CreateBitmapFromPngRes(ABOUT_RES_NAME);
+  try
+    AboutBoxIndex := AboutBoxServices.AddPluginInfo(
+      RsAboutTitle+' '+MY_COMPONENTS_VERSION,
+      RsAboutDescription, LBitmap.Handle, False, RsAboutLicense);
+  finally
+    LBitmap.Free;
+  end;
+end;
+
+procedure UnregisterAboutBox;
+begin
+  if (AboutBoxIndex <> 0) and Assigned(AboutBoxServices) then
+  begin
+    AboutBoxServices.RemovePluginInfo(AboutBoxIndex);
+    AboutBoxIndex := 0;
+    AboutBoxServices := nil;
+  end;
+end;
+
+procedure RegisterWithSplashScreen;
+var
+  LBitmap: Vcl.Graphics.TBitmap;
+begin
+  LBitmap := CreateBitmapFromPngRes(SPLASH_RES_NAME);
+  try
+    SplashScreenServices.AddPluginBitmap(
+      RsAboutTitle+' '+MY_COMPONENTS_VERSION,
+      LBitmap.Handle, False, RsAboutLicense, '');
+  finally
+    LBitmap.Free;
+  end;
+end;
 
 const
   ITEM_COMPONENT_EDITOR = 0;
@@ -61,6 +139,8 @@ type
 
 procedure Register;
 begin
+  RegisterWithSplashScreen;
+
   RegisterComponents('Sample Components', [TClockLabel]);
 
   RegisterComponentEditor(TClockLabel, TClockLabelComponentEditor);
@@ -98,5 +178,11 @@ function TClockLabelComponentEditor.GetVerbCount: Integer;
 begin
   Result := ITEMS_COUNT;
 end;
+
+initialization
+  RegisterAboutBox;
+
+finalization
+  UnRegisterAboutBox;
 
 end.

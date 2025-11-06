@@ -7,7 +7,7 @@ Examples of Delphi Components for VCL and FMX, used for Tutorial Speech at ITDev
 
 ## TClockLabel
 
-A simple Clock based built with a TLabel and a TTimer (VCL and FMX Versions).
+A simple ClockLabel inheriting a TLabel and incorporating a TTimer (VCL and FMX Versions).
 
 ![./Docs/TCLOCKLABEL128_PNG](./Docs/TCLOCKLABEL128_PNG.png)
 

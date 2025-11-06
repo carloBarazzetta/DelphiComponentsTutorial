@@ -166,7 +166,7 @@ end;
 
 procedure TClockLabelEditor.InitGUI;
 var
-  I: TClockLabelType;
+  I: TClockType;
   S: TSpecialFont;
   LPos: Integer;
   LFontName, LDrawName: string;
@@ -174,9 +174,9 @@ begin
   //Init caption and version
   Caption := Format(Caption, [CLOCK_LABEL_VERSION]);
   //Init ClockTypeComboBox
-  for I := Low(TClockLabelType) to High(TClockLabelType) do
+  for I := Low(TClockType) to High(TClockType) do
   begin
-    LDrawName := GetEnumName(TypeInfo(TClockLabelType), Ord(I));
+    LDrawName := GetEnumName(TypeInfo(TClockType), Ord(I));
     LPos := ClockTypeComboBox.Items.Add(LDrawName);
     if I = FSourceClockLabel.ClockType then
       ClockTypeComboBox.ItemIndex := LPos;
@@ -231,7 +231,7 @@ end;
 
 procedure TClockLabelEditor.UpdateFromGUI;
 begin
-  ClockLabel.ClockType := TClockLabelType(ClockTypeComboBox.ItemIndex);
+  ClockLabel.ClockType := TClockType(ClockTypeComboBox.ItemIndex);
   ClockLabel.SpecialFont := TSpecialFont(SpecialFontComboBox.ItemIndex);
 end;
 

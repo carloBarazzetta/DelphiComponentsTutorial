@@ -1,0 +1,69 @@
+<style type="text/css">
+code{
+  font-family: "Consolas", monospace;
+}
+pre{
+  border: 1px solid #ddd;
+  border-left: 3px solid #f36d33;
+  overflow: auto;
+  padding: 1em 1.5em;
+  display: block;
+}
+Blockquote{
+  border-left: 3px solid #d0d0d0;
+  padding-left: 0.5em;
+  margin-left:1em;
+}
+Blockquote p{
+  margin: 0;
+}
+table{
+  border:1px solid;
+  border-collapse:collapse;
+}
+th{  padding:5px;
+  border:1px solid;
+}
+td{
+  padding:5px;
+  border:1px solid;
+}
+</style>
+<h1>DelphiComponentsTutorial <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg" alt="License"/></a></h1>
+<hr />
+<p>Examples of Delphi Components for VCL and FMX, used for Tutorial Speech at ITDevCon 2025 in Milan (Italy).</p>
+<h1>Example Component:</h1>
+<h2>TClockLabel</h2>
+<p>A simple ClockLabel inheriting a TLabel and incorporating a TTimer (VCL and FMX Versions).</p>
+<p><img src="./Docs/TCLOCKLABEL128_PNG.png" alt="./Docs/TCLOCKLABEL128_PNG"/></p>
+<p>VCL Demo:</p>
+<p><img src="./Docs/ClockLabelDemo.png" alt="./Docs/ClockLabelDemo"/></p>
+<p>FMX Demo:</p>
+<p><img src="./Docs/ClockLabelDemoFMX.png" alt="./Docs/ClockLabelDemoFMX"/></p>
+<h3>Features:</h3>
+<ul>
+<li>Custom Font (DotMatrix or AlarmClock)</li>
+<li>Custom DisplayFormat (CustomClock, ClassicClock, HourMinutesClock, MillisecondsClock)</li>
+</ul>
+<h3>Source Details:</h3>
+<pre><code class="Pascal">type
+  TClockLabelType = (ctCustomClock, ctClassicClock, ctHourMinutesClock, ctMillisecondsClock);
+  TSpecialFont = (sfOther, sfDotMatrix, sfAlarmClock);
+
+const
+  SpecialFontNames : Array[TSpecialFont] of string =
+    ('Other Font', '5x7 DOT Matrix', 'alarm clock');
+
+    //TClockLabel Properties
+    property ClockType: TClockLabelType read FClockLabelType write SetClockLabelType default ctClassicClock;
+    property DisplayFormat: string read FDisplayFormat write SetDisplayFormat stored StoreDisplayFormat;
+    property SpecialFont: TSpecialFont read FSpecialFont write SetSpecialFont default sfOther;
+    property TimerInterval: Cardinal read GetInterval write SetInterval default 1000;
+
+    //TClockLabel Event-handlers
+    property OnChange: TNotifyEvent read FOnChange write FOnChange;
+</code></pre>
+<h3>Available for Delphi 12 and Delphi 13 (VCL 32bit and 64bit platforms)</h3>
+<p><img src="./Docs/SupportingDelphi.jpg" alt="Delphi Support"/></p>
+<p>Author: Carlo Barazzetta</p>
+<p>Copyright © Ethea S.r.l.</p>
